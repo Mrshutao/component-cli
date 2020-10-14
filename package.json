@@ -1,14 +1,16 @@
 {
-  "name": "@tao.shu/input",
-  "version": "1.0.1",
-  "description": "输入框组件",
-  "main": "lib/index.js",
+  "name": "@tao.shu/component",
+  "version": "1.0.7",
+  "description": "组件库开发",
+  "main": "main/index.js",
+  "typings": "lib/index.d.ts",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "build": "tsc && rollup -c rollup.config.js",
-    "commit": "git-cz"
+    "build": "rollup -c rollup.config.js",
+    "commit": "git-cz",
+    "pub": "npm run build && npm publish --access public"
   },
   "husky": {
     "hooks": {
@@ -37,14 +39,18 @@
   ],
   "author": "tao.shu",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "rollup-plugin-commonjs": "^10.1.0"
+  },
   "devDependencies": {
     "@commitlint/cli": "9.1.1",
     "@commitlint/config-conventional": "9.1.1",
+    "@emotion/core": "^10.0.35",
     "@types/react": "^16.9.52",
     "@typescript-eslint/eslint-plugin": "^4.4.1",
     "@typescript-eslint/parser": "^4.4.1",
     "commitizen": "^4.2.1",
+    "cross-env": "^7.0.2",
     "eslint": "^7.11.0",
     "eslint-config-react-app": "^5.2.1",
     "eslint-plugin-flowtype": "^5.2.0",
@@ -54,6 +60,7 @@
     "eslint-plugin-react-hooks": "^4.1.2",
     "husky": "^4.3.0",
     "lint-staged": "^10.4.0",
+    "node-sass": "^4.14.1",
     "prettier": "^2.1.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -61,7 +68,9 @@
     "rollup-plugin-delete": "^2.0.0",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-postcss": "^3.1.8",
+    "rollup-plugin-replace": "^2.2.0",
     "rollup-plugin-typescript": "^1.0.1",
+    "rollup-plugin-uglify": "^6.0.4",
     "tslib": "^2.0.3",
     "typescript": "^4.0.3"
   }

@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import { Input } from "@tao.shu/input";
+import React, { useState } from 'react';
+import { Input } from '@tao.shu/component';
 
 const App = () => {
-  const [value, setValue] = useState("");
+  const [value, setValue] = useState('');
   return (
     <div>
       <Input value={value} onChange={setValue} />
