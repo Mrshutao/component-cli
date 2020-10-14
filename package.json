@@ -1,0 +1,68 @@
+{
+  "name": "@tao.shu/input",
+  "version": "1.0.1",
+  "description": "输入框组件",
+  "main": "lib/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "build": "tsc && rollup -c rollup.config.js",
+    "commit": "git-cz"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.ts?(x)": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
+    ],
+    "src/**/*.scss": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "keywords": [
+    "组件"
+  ],
+  "author": "tao.shu",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "@commitlint/cli": "9.1.1",
+    "@commitlint/config-conventional": "9.1.1",
+    "@types/react": "^16.9.52",
+    "@typescript-eslint/eslint-plugin": "^4.4.1",
+    "@typescript-eslint/parser": "^4.4.1",
+    "commitizen": "^4.2.1",
+    "eslint": "^7.11.0",
+    "eslint-config-react-app": "^5.2.1",
+    "eslint-plugin-flowtype": "^5.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.21.4",
+    "eslint-plugin-react-hooks": "^4.1.2",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.4.0",
+    "prettier": "^2.1.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "rollup": "^2.29.0",
+    "rollup-plugin-delete": "^2.0.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-postcss": "^3.1.8",
+    "rollup-plugin-typescript": "^1.0.1",
+    "tslib": "^2.0.3",
+    "typescript": "^4.0.3"
+  }
+}
